@@ -1,86 +1,63 @@
+# Project Title
 
-# typescript-webpack-minimal
-Mininal setup for using typescript with webpack
+One Paragraph of project description goes here
 
-# How to use
+## Getting Started
 
-```
-yarn install
-yarn start
-# Open your browser to the url noted in output (usually localhost:8008)
-```
+These instructions will get you a copy of the project up and running on your
+local machine for development and testing purposes. See deployment for notes on
+how to deploy the project on a live system.
 
-# How to reproduce
+### Prerequisites
 
-The setup can be reproduced by running these commands:
+What things you need to install the software and how to install them
 
 ```
-mkdir typescript-webpack-minimal
-cd typescript-webpack-minimal
-yarn init -y
-yarn add --dev typescript webpack ts-loader webpack-dev-server
-./node_modules/typescript/bin/tsc --init
+Give examples
 ```
 
-Replace last `}` in package.json with:
+### Installing
+
+A step by step series of examples that tell you have to get a development env
+running
+
+Say what the step will be
+
 ```
-  ,
-  "scripts": {
-    "start": "webpack-dev-server",
-    "tsc": "tsc"
-  }
-}
+Give the example
 ```
 
-Create webpack.config.js
-```
-var path = require("path");
+And repeat
 
-module.exports = {
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js']
-  },
-  entry: "./src/index.tsx",
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "/dist/"
-  },
-  module: {
-    rules: [
-      { test: /\.tsx?$/, loader: "ts-loader" }
-    ]
-  },
-  devServer: {
-    stats: {
-      assets: false,
-      hash: false,
-      chunks: false,
-      errors: true,
-      errorDetails: true,
-    },
-    overlay: true
-  }
-};
+```
+until finished
 ```
 
-Create index.html
-```
-<html>
-  <head>
-    <title>typescript-webpack-minimal</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="dist/bundle.js"></script>
-  </body>
-</html>
-```
+End with an example of getting some data out of the system or using it for a
+little demo
 
-Create src/index.tsx
-```
-const x: number = 42;
-const message: string = `Hello ${x}`;
-document.getElementById("root").innerHTML = message;
-```
-# typescript-react-redux
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+* [React](https://reactjs.org/) - a JavaScript library for building the user
+  interfaces.
+* [Redux](https://redux.js.org/) - state container for the application.
+* [Typescript](https://www.typescriptlang.org/) - typed superset of Javascript.
+  that complies to plain Javascript
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available,
+see the [tags on this repository](https://github.com/your/project/tags).
+
+## Authors
+
+* **Samuel Gustafsson** - _Initial work_ -
+
+## License
+
+This project is licensed under the MIT License - see the
+[LICENSE.md](LICENSE.md) file for details

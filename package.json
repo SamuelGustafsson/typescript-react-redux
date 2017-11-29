@@ -15,5 +15,11 @@
   "scripts": {
     "start": "webpack-dev-server",
     "tsc": "tsc"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.25",
+    "@types/react-dom": "^16.0.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   }
 }

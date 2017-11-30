@@ -1,0 +1,11 @@
+{
+  "extends": "../../src/base-tsconfig.json",
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es5",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "jsx": "react",
+    "lib": ["es2015", "dom"]
+  }
+}

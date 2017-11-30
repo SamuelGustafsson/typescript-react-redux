@@ -1,10 +1,11 @@
+"use strict";
 var path = require("path");
 
 module.exports = {
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: [".ts", ".tsx", ".js"]
   },
-  entry: "./src/index.tsx",
+  entry: "./src/client/index.tsx",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
@@ -12,7 +13,11 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: "ts-loader" }
+      { 
+        exclude: /^node_modules/,
+        test: /\.tsx?$/,
+        loader: "ts-loader" 
+      }
     ]
   },
   devServer: {
@@ -21,8 +26,8 @@ module.exports = {
       hash: false,
       chunks: false,
       errors: true,
-      errorDetails: true,
+      errorDetails: true
     },
-    overlay: true
+    overlay: true,
   }
 };
